@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Image, Platform, StyleSheet, Text, View } from "react-native";
 import { Icon } from "react-native-elements";
-import { textSize } from "../styles";
+import { Theme } from "../styles";
 
 // Display the Logo and the user name
 export default class Header extends Component {
@@ -9,7 +9,7 @@ export default class Header extends Component {
     return (
       <View style={this.props.style}>
         <View style={styles.container}>
-          <View style={styles.icon_name_container}>
+          <View style={styles.containerIconName}>
             <Image
               source={require("../assets/nubanklogo_white.png")}
               style={styles.nubank}
@@ -20,7 +20,7 @@ export default class Header extends Component {
           <Icon
             name="keyboard-arrow-down"
             color="white"
-            style={styles.down_arrow}
+            style={styles.downArrow}
           />
         </View>
       </View>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  icon_name_container: {
+  containerIconName: {
     flexDirection: "row",
     alignSelf: "center"
   },
@@ -45,9 +45,9 @@ const styles = StyleSheet.create({
     color: "white",
     alignSelf: "center",
     fontWeight: "bold",
-    fontSize: textSize.title
+    fontSize: Theme.textSize.title
   },
-  down_arrow: {
+  downArrow: {
     alignSelf: "center"
   }
 });

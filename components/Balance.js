@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View, Dimensions } from "react-native";
 import { Icon } from "react-native-elements";
-import { colors, textSize } from "../styles";
+import { Theme } from "../styles";
 
 export default class Balance extends Component {
   render() {
@@ -9,49 +9,49 @@ export default class Balance extends Component {
       <View style={this.props.style}>
         <View style={styles.container}>
           <View style={styles.body}>
-            <View style={styles.balance_info}>
+            <View style={styles.balanceInfo}>
               <Icon
-                style={styles.credit_card_icon}
+                style={styles.iconCreditCard}
                 name="credit-card"
-                color={colors.lightgrey}
+                color={Theme.colors.lightgrey}
                 size={40}
               />
-              <View style={styles.text_panel}>
+              <View style={styles.textPanel}>
                 <Text style={styles.invoice}>Fatura Atual</Text>
-                <Text style={styles.invoice_value}>
+                <Text style={styles.invoiceValue}>
                   R$: {this.props.invoiceValue}
                 </Text>
-                <View style={styles.available_container}>
+                <View style={styles.availableContainer}>
                   <Text style={styles.available}>Limite disponível </Text>
-                  <Text style={styles.available_value}>
+                  <Text style={styles.availableValue}>
                     R$ {this.props.availableValue}
                   </Text>
                 </View>
               </View>
             </View>
             <View style={styles.colorbar}>
-              <View style={styles.colorbar_red} />
-              <View style={styles.colorbar_blue} />
-              <View style={styles.colorbar_green} />
+              <View style={styles.colorbarRed} />
+              <View style={styles.colorbarBlue} />
+              <View style={styles.colorbarGreen} />
             </View>
           </View>
 
           <View style={styles.footer}>
             <Icon
-              style={styles.footer_icons}
+              style={styles.footerIcons}
               name="food"
               type="material-community"
-              color={colors.lightgrey}
+              color={Theme.colors.lightgrey}
               size={40}
             />
-            <Text style={styles.footer_text}>
+            <Text style={styles.footerText}>
               Compra mais recente em Pag*Sorvetesrequibom no valor de R$ 6,30
               terça
             </Text>
             <Icon
-              style={styles.footer_icons}
+              style={styles.footerIcons}
               name="keyboard-arrow-right"
-              color={colors.lightgrey}
+              color={Theme.colors.lightgrey}
               size={20}
             />
           </View>
@@ -84,37 +84,37 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 15
   },
-  balance_info: {
+  balanceInfo: {
     flex: 10,
     justifyContent: "space-between",
     alignItems: "flex-start",
     padding: 10
   },
-  text_panel: {
+  textPanel: {
     alignItems: "stretch",
     margin: 10
   },
   invoice: {
-    fontSize: textSize.enphasis,
-    color: colors.lightblue,
+    fontSize: Theme.textSize.enphasis,
+    color: Theme.colors.lightblue,
     textTransform: "uppercase"
   },
-  invoice_value: {
-    fontSize: textSize.big,
-    color: colors.lightblue
+  invoiceValue: {
+    fontSize: Theme.textSize.big,
+    color: Theme.colors.lightblue
   },
-  available_container: {
+  availableContainer: {
     flexDirection: "row"
   },
   available: {
-    fontSize: textSize.normal,
-    color: colors.darkgrey
+    fontSize: Theme.textSize.normal,
+    color: Theme.colors.darkgrey
   },
-  available_value: {
-    fontSize: textSize.normal,
-    color: colors.lightgreen
+  availableValue: {
+    fontSize: Theme.textSize.normal,
+    color: Theme.colors.lightgreen
   },
-  credit_card_icon: {
+  iconCreditCard: {
     flex: 1
   },
   colorbar: {
@@ -122,26 +122,26 @@ const styles = StyleSheet.create({
     width: 0,
     margin: 20
   },
-  colorbar_red: {
+  colorbarRed: {
     flex: 1,
     width: 0,
-    borderColor: colors.lightred,
+    borderColor: Theme.colors.lightred,
     borderLeftWidth: barwidth,
     borderRightWidth: barwidth,
     borderTopStartRadius: 5,
     borderTopEndRadius: 5
   },
-  colorbar_blue: {
+  colorbarBlue: {
     flex: 2,
     width: 0,
-    borderColor: colors.lightblue,
+    borderColor: Theme.colors.lightblue,
     borderLeftWidth: barwidth,
     borderRightWidth: barwidth
   },
-  colorbar_green: {
+  colorbarGreen: {
     flex: 2,
     width: 0,
-    borderColor: colors.lightgreen,
+    borderColor: Theme.colors.lightgreen,
     borderLeftWidth: barwidth,
     borderRightWidth: barwidth,
     borderBottomStartRadius: 5,
@@ -155,13 +155,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "lightgrey"
   },
-  footer_text: {
+  footerText: {
     flex: 4,
     margin: 20,
-    fontSize: textSize.normal,
-    color: colors.darkgrey
+    fontSize: Theme.textSize.normal,
+    color: Theme.colors.darkgrey
   },
-  footer_icons: {
+  footerIcons: {
     flex: 1
   }
 });

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { colors, textSize } from "../styles";
+import { Theme } from "../styles";
 import {
   StyleSheet,
   TouchableHighlight,
@@ -26,7 +26,7 @@ export default class Footer extends Component {
         >
           <View style={styles.container}>
             <Icon name="person-outline" color="white" />
-            <Text style={styles.text_info}>Indicar amigos</Text>
+            <Text style={styles.textInfo}>Indicar amigos</Text>
           </View>
         </TouchableHighlight>
       </View>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: colors.lightpurple,
+    backgroundColor: Theme.colors.lightpurple,
     borderRadius: 5,
     alignItems: "flex-start",
     padding: 4,
@@ -48,13 +48,13 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100
   },
-  person_icon: {
+  iconPerson: {
     flex: 1
   },
-  text_info: {
+  textInfo: {
     flex: 3,
     textAlignVertical: "bottom",
     color: "white",
-    fontSize: textSize.small
+    fontSize: Theme.textSize.small
   }
 });

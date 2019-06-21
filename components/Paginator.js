@@ -77,7 +77,7 @@ export default class Paginator extends Component {
                 <Animated.View // Animation of the indicators
                   key={i} // Using index of the array to be sure that the keys are unique
                   // style={[styles.indicator_item]}
-                  style={[styles.indicator_item, { opacity }]}
+                  style={[styles.indicatorItem, { opacity }]}
                   /* style={{ opacity, height: 10, width: 10, backgroundColor: '#595959', margin: 8, borderRadius: 5 }} */
                 />
               );
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     margin: 5,
     flexDirection: "row" // Dots in a row
   },
-  indicator_item: {
+  indicatorItem: {
     height: 10,
     width: 10,
     backgroundColor: "#f0f0f0",

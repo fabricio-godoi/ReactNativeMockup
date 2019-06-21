@@ -7,9 +7,9 @@
  */
 
 import React, { Component } from "react";
-import { Platform, StyleSheet, View, FlatList, StatusBar } from "react-native";
+import { StyleSheet, View, FlatList, StatusBar } from "react-native";
 import { Header, FriendIndicator, Paginator, Balance } from "./components";
-import { colors } from "./styles";
+import { Theme } from "./styles";
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -26,7 +26,7 @@ export default class App extends Component<Props> {
 
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor={colors.purple} />
+        <StatusBar backgroundColor={Theme.colors.purple} />
 
         <Header style={styles.header} name="Sara" />
         <View style={styles.body}>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "stretch",
-    backgroundColor: colors.purple,
+    backgroundColor: Theme.colors.purple,
     color: "white"
   },
   header: {
