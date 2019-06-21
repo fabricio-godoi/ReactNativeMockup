@@ -5,7 +5,7 @@ Application Mockup with React Native framework. The project is intended to mocku
 
 After importing the project, run:
 
-react-native link
+``react-native link``
 
 Observation: Project tested only in Android, but should work in iOs without problems.
 
